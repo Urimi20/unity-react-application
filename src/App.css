@@ -7,7 +7,6 @@
   --max-width: 1200px;
   --transition: 0.3s ease;
 
-  /* Definimi i fontit të ri */
   --core--font-family--primary-font: "Objectivity", Arial, sans-serif;
 }
 
@@ -18,24 +17,22 @@
 }
 
 body {
-  /* Zbatimi i fontit në gjithë faqen */
   font-family: var(--core--font-family--primary-font);
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Stilimi i titujve h1 dhe h2 */
 h1 {
-  font-size: 4rem; /* Rritur për Hero section */
-  font-weight: 800; /* Extra Bold */
+  font-size: 60px;
+  font-weight: 500;
   line-height: 1.1;
   color: var(--text-light);
   margin-bottom: 20px;
 }
 
 h2 {
-  font-size: 3.5rem; /* Rritur për titujt e seksioneve */
+  font-size: 50px;
   font-weight: 100;
   line-height: 1.2;
   letter-spacing: -1px;
@@ -66,10 +63,9 @@ h2 {
 
 .btn-green:hover {
   background-color: var(--primary-dark);
-  transform: translateY(-2px); /* Një efekt i vogël lëvizjeje */
+  transform: translateY(-2px);
 }
 
-/* Për pajisjet mobile që titujt të mos dalin jashtë ekranit */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.8rem;
