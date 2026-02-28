@@ -1,0 +1,64 @@
+/* home responsive */
+@media (max-width: 1024px) {
+  :root {
+    --section-spacing: 60px;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .hero-container,
+  .why-us-grid,
+  .process-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .services-grid,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .services-grid,
+  .testimonials-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+  }
+
+  .footer-cta {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .experience-badge {
+    position: static;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+}
+
+/* home responsive ends */
