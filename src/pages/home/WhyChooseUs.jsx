@@ -15,8 +15,8 @@ const WhyChooseUs = () => {
             <div className="experience-badge">
               <p>
                 <strong>
-                  "Reliable and meticulous work made the renovation process
-                  easy"
+                  "Puna e besueshme dhe e përpiktë e bëri procesin e renovimit
+                  shumë të lehtë"
                 </strong>
               </p>
               <span>- Sophie Moore</span>
@@ -25,32 +25,35 @@ const WhyChooseUs = () => {
         </div>
 
         <div className="why-us-content">
-          <span className="subtitle">ABOUT US</span>
-          <h2>Why choose us?</h2>
+          <span className="subtitle">RRETH NESH</span>
+          <h2>Pse të na zgjidhni ne?</h2>
           <p className="description">
-            We bring years of experience and a passion for nature to every
-            project. Our mission is to create spaces that breathe life into your
-            home.
+            Ne sjellim përvojë shumëvjeçare dhe pasion për natyrën në çdo
+            projekt. Misioni ynë është të krijojmë hapësira që i japin frymë dhe
+            jetë shtëpisë suaj.
           </p>
 
           <div className="features">
             <div className="feature-item">
               <div className="icon-check">✓</div>
               <div>
-                <h4>Eco friendly</h4>
-                <p>We use sustainable materials and organic fertilizers.</p>
+                <h4>Ekologjikë</h4>
+                <p>Ne përdorim materiale të qëndrueshme dhe plehra organikë.</p>
               </div>
             </div>
             <div className="feature-item">
               <div className="icon-check">✓</div>
               <div>
-                <h4>Done with love</h4>
-                <p>Every plant is placed with care and attention to detail.</p>
+                <h4>Punë me përkushtim</h4>
+                <p>
+                  Çdo bimë vendoset me kujdes dhe vëmendje maksimale ndaj
+                  detajeve.
+                </p>
               </div>
             </div>
           </div>
 
-          <button className="btn btn-green">Get in touch</button>
+          <button className="btn btn-green">Na kontaktoni</button>
         </div>
       </div>
     </section>

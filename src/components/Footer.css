@@ -43,6 +43,7 @@
   border: 1px solid white;
   background-color: var(--primary-dark);
   color: white;
+  margin-left: 20px;
 }
 .footer-grid {
   display: grid;
@@ -66,7 +67,6 @@
 .footer-desc {
   font-size: 1rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 30px;
 }
 
@@ -80,16 +80,10 @@
 
 .footer-subscribe {
   display: flex;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: white;
   padding: 6px;
   border-radius: 50px;
   transition: var(--transition);
-}
-
-.footer-subscribe:focus-within {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--primary-green);
 }
 
 .footer-subscribe input {
@@ -97,7 +91,7 @@
   background: transparent;
   border: none;
   padding: 10px 20px;
-  color: white;
+  color: black;
   outline: none;
 }
 
@@ -109,14 +103,12 @@
   height: 45px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 20px;
   transition: var(--transition);
 }
 
 .btn-subscribe:hover {
   transform: scale(1.05);
-  background: white;
-  color: var(--primary-dark);
 }
 
 .footer-col h4 {
@@ -127,7 +119,7 @@
 }
 
 .footer-col ul li a {
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
   text-decoration: none;
   transition: all 0.3s ease;
   display: inline-block;
@@ -169,7 +161,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
 }
 
 .social-links {
@@ -179,6 +171,7 @@
 
 .social-icon {
   transition: var(--transition);
+  color: white;
 }
 
 .social-icon:hover {

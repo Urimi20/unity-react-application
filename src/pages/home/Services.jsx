@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,33 +13,33 @@ import serviceImg3 from "../../assets/images/Home_Images/exploreImg3.png";
 
 const servicesData = [
   {
-    title: "Garden design",
-    desc: "Professional layouts and 3D visualizations.",
+    title: "Dizajni i kopshtit",
+    desc: "Planimetri profesionale dhe vizualizime 3D për projektin tuaj.",
     img: serviceImg1,
   },
   {
-    title: "Flower planting",
-    desc: "Seasonal flowers selected for your soil.",
+    title: "Mbjellja e luleve",
+    desc: "Lule sezonale të përzgjedhura sipas specifikave të tokës suaj.",
     img: serviceImg2,
   },
   {
-    title: "Maintenance",
-    desc: "Weekly care to keep your garden pristine.",
+    title: "Mirëmbajtja",
+    desc: "Kujdes i përjavshëm për ta mbajtur kopshtin tuaj në gjendje të përsosur.",
     img: serviceImg3,
   },
   {
-    title: "Lawn Care",
-    desc: "Perfectly mowed and healthy green grass.",
+    title: "Kujdesi për barin",
+    desc: "Korrje e rregullt dhe trajtim për një bar të shëndetshëm dhe të gjelbër.",
     img: serviceImg1,
   },
   {
-    title: "Tree Pruning",
-    desc: "Professional cutting for tree health.",
+    title: "Krasitja e pemëve",
+    desc: "Prerje profesionale për shëndetin dhe estetikën e pemëve tuaja.",
     img: serviceImg2,
   },
   {
-    title: "Irrigation",
-    desc: "Smart systems for water efficiency.",
+    title: "Sistemet e ujitjes",
+    desc: "Sisteme inteligjente për efikasitet maksimal të përdorimit të ujit.",
     img: serviceImg3,
   },
 ];
@@ -51,15 +51,15 @@ const Services = () => {
         <div className="services-header">
           <div className="header-left">
             <span className="subtitle" style={{ color: "#A3C9A8" }}>
-              SERVICES
+              SHËRBIMET TONA
             </span>
             <h2 className="text-white">
-              Explore our wide <br /> range of services
+              Eksploroni gamën tonë <br /> të gjerë të shërbimeve
             </h2>
           </div>
           <div className="services-btns">
-            <button className="btn btn-green">Get in touch</button>
-            <button className="btn-outline-white">Browse all</button>
+            <button className="btn btn-green">Na kontaktoni</button>
+            <button className="btn-outline-white">Shiko të gjitha</button>
           </div>
         </div>
 

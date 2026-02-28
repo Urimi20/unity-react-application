@@ -1,11 +1,13 @@
 :root {
-  --primary-dark: #103029; /* E gjelbra e errët e sfondit */
-  --primary-green: #297652; /* Ngjyra e butonave dhe ikonave */
-  --accent-light: #f4f7f6; /* Sfondi i hapur i seksioneve */
+  --primary-dark: #103029;
+  --primary-green: #297652;
+  --accent-light: #f4f7f6;
   --text-main: #333333;
   --text-light: #ffffff;
   --max-width: 1200px;
   --transition: 0.3s ease;
+
+  --core--font-family--primary-font: "Objectivity", Arial, sans-serif;
 }
 
 * {
@@ -15,9 +17,25 @@
 }
 
 body {
-  font-family: "Inter", sans-serif; /* Rekomandohet ky font për këtë dizajn */
+  font-family: var(--core--font-family--primary-font);
   color: var(--text-main);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: -1px;
 }
 
 .container {
@@ -27,11 +45,12 @@ body {
 }
 
 .btn {
-  padding: 12px 28px;
+  font-family: var(--core--font-family--primary-font);
+  padding: 14px 32px;
   border-radius: 50px;
   border: none;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
   transition: var(--transition);
   text-decoration: none;
   display: inline-block;
@@ -44,4 +63,14 @@ body {
 
 .btn-green:hover {
   background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
 }

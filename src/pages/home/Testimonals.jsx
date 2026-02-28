@@ -5,22 +5,22 @@ const Testimonials = () => {
     {
       name: "John Carter",
       handle: "@john_c",
-      text: "Fantastic landscaping service with remarkable results. Highly recommended!",
+      text: "Shërbim fantastik i rregullimit të peizazhit me rezultate të jashtëzakonshme. I rekomandoj plotësisht!",
     },
     {
       name: "Sophie Moore",
       handle: "@sophi_m",
-      text: "Transformed our yard into a beautiful outdoor oasis, absolutely stunning.",
+      text: "E transformuan oborrin tonë në një oaz të vërtetë natyror. Rezultati është thjesht mahnitës.",
     },
     {
       name: "Matt Cannon",
       handle: "@matt_c",
-      text: "Exceptional service and breathtaking results. Our garden looks amazing!",
+      text: "Shërbim cilësor dhe rezultate që të lënë pa frymë. Kopshti ynë duket i mrekullueshëm!",
     },
     {
       name: "Lilly Woods",
       handle: "@lilly_w",
-      text: "Highly professional team delivering top-notch landscaping every time.",
+      text: "Ekip tejet profesional që ofron cilësi maksimale në çdo projekt rregullimi.",
     },
   ];
 
@@ -28,22 +28,22 @@ const Testimonials = () => {
     {
       name: "Sandy H.",
       handle: "@sandy_h",
-      text: "The transformation of our space couldn't be better. Expert work!",
+      text: "Transformimi i hapësirës sonë nuk mund të ishte më i mirë se aq. Punë ekspertësh!",
     },
     {
       name: "Patrick Meyer",
       handle: "@patrick_m",
-      text: "Expert landscapers who deliver incredible results. Our yard is gorgeous!",
+      text: "Peizazhistë profesionistë që ofrojnë rezultate të pabesueshme. Oborri ynë është i shkëlqyer!",
     },
     {
       name: "Kathie Corl",
       handle: "@kathie_c",
-      text: "Unmatched expertise and dedication to landscaping perfection every time.",
+      text: "Përvojë e pakrahasueshme dhe përkushtim maksimal drejt përsosmërisë në çdo detaj.",
     },
     {
       name: "Andy Smith",
       handle: "@andy_s",
-      text: "Exceeded all our expectations with their landscaping skills and creativity.",
+      text: "Tejkaluan të gjitha pritshmëritë tona me aftësitë e tyre krijuese dhe profesionale.",
     },
   ];
 
@@ -71,9 +71,9 @@ const Testimonials = () => {
     <section className="testimonials section-padding">
       <div className="container">
         <div className="testimonials-header text-center">
-          <span className="subtitle">● TESTIMONIALS</span>
+          <span className="subtitle">● PËRSHTYPYET E KLIENTËVE</span>
           <h2>
-            What our clients say <br /> about our work
+            Çfarë thonë klientët tanë <br /> për punën tonë
           </h2>
         </div>
       </div>
@@ -103,7 +103,7 @@ const Testimonials = () => {
       </div>
 
       <div className="text-center mt-50">
-        <button className="btn btn-green">Get in touch</button>
+        <button className="btn btn-green">Na kontaktoni</button>
       </div>
     </section>
   );

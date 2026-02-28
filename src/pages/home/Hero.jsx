@@ -13,23 +13,27 @@ const Hero = () => {
       <div className="container hero-container">
         <div className="hero-content">
           <h1 className="fade-in">
-            Let us bring life <br /> to your garden
+            Na lejoni t'i japim <br /> jetë kopshtit tuaj
           </h1>
           <p>
-            Expert landscaping services tailored to your lifestyle. We create
-            sustainable and beautiful outdoor environments.
+            Shërbime profesionale të peizazhit, të përshtatura sipas stilit tuaj
+            të jetesës. Ne krijojmë mjedise të jashtme të qëndrueshme dhe
+            estetike.
           </p>
           <div className="hero-btns">
-            <button className="btn btn-green">Get in touch</button>
-            <button className="btn-outline">Browse services →</button>
+            <button className="btn btn-green">Na kontaktoni</button>
+            <button className="btn-outline">Eksploroni shërbimet →</button>
           </div>
         </div>
 
         <div className="hero-floating-card">
-          <h3>Book your service today</h3>
-          <p>Enter your email and we'll contact you for a free consultation.</p>
+          <h3>Rezervoni shërbimin tuaj</h3>
+          <p>
+            Vendosni adresën tuaj elektronike dhe ne do t'ju kontaktojmë për një
+            konsultë falas.
+          </p>
           <div className="input-group">
-            <input type="email" placeholder="Enter your email" />
+            <input type="email" placeholder="Adresa juaj elektronike" />
             <button className="btn-arrow">→</button>
           </div>
         </div>
