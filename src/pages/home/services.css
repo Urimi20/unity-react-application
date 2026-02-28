@@ -2,6 +2,7 @@
   background-color: var(--primary-dark);
   padding: 100px 0;
   color: white;
+  border-radius: 30px;
 }
 
 .services-header {
@@ -10,7 +11,11 @@
   align-items: flex-end;
   margin-bottom: 60px;
 }
-
+.services-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 .text-white {
   color: white;
   font-size: 3rem;

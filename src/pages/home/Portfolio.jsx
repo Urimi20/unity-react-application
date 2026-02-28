@@ -12,36 +12,36 @@ const Portfolio = () => {
     <section className="portfolio section-padding">
       <div className="container">
         <div className="portfolio-header">
-          <span className="subtitle">PORTFOLIO</span>
+          <span className="subtitle">PORTOFOLI</span>
           <h2>
-            Our past projects of <br /> landscaping work
+            Projektet tona të realizuara <br /> në arkitekturën e peizazhit
           </h2>
         </div>
 
         <div className="portfolio-grid-custom">
           <div className="port-item big-top">
-            <img src={portImg1} alt="Project 1" />
+            <img src={portImg1} alt="Projekti 1" />
           </div>
           <div className="port-item small">
-            <img src={portImg2} alt="Project 2" />
+            <img src={portImg2} alt="Projekti 2" />
           </div>
           <div className="port-item small">
-            <img src={portImg3} alt="Project 3" />
+            <img src={portImg3} alt="Projekti 3" />
           </div>
 
           <div className="port-item small">
-            <img src={portImg4} alt="Project 4" />
+            <img src={portImg4} alt="Projekti 4" />
           </div>
           <div className="port-item small">
-            <img src={portImg5} alt="Project 5" />
+            <img src={portImg5} alt="Projekti 5" />
           </div>
           <div className="port-item big-bottom">
-            <img src={portImg6} alt="Project 6" />
+            <img src={portImg6} alt="Projekti 6" />
           </div>
         </div>
 
         <div className="portfolio-btn">
-          <button className="btn btn-green">View all projects</button>
+          <button className="btn btn-green">Shikoni të gjitha projektet</button>
         </div>
       </div>
     </section>

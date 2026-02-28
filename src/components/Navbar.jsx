@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container nav-wrapper">
         <Link to="/" className="logo">
-          Garden<span>View</span>
+          Kop<span>Shti</span>
         </Link>
 
         <ul className="nav-links">

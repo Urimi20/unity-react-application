@@ -3,8 +3,10 @@
   background-position: center;
   min-height: 90vh;
   display: flex;
-  align-items: center;
+  align-items: end;
   color: white;
+  padding-bottom: 50px;
+  border-radius: 30px;
 }
 
 .hero-container {
@@ -15,7 +17,6 @@
 }
 
 .hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1.1;
   margin-bottom: 20px;
 }

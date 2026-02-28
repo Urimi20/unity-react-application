@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-cta">
           <h2>
-            Ready to transform <br /> your outdoor space?
+            Get in touch and <br /> receive a free quote!
           </h2>
           <div className="footer-cta-btns">
             <button className="btn btn-green">Get started now</button>
@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-col about">
             <a href="/" className="footer-logo">
-              Garden<span>View</span>
+              Kop<span>Shti</span>
             </a>
             <p className="footer-desc">
               We create sustainable and breathtaking landscapes that bring
