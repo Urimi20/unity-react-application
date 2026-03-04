@@ -17,9 +17,7 @@ const Navbar = () => {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <div className="dropdown">
-              Pages <i className="arrow-down"></i>
-            </div>
+            <Link to="/shop">Shop</Link>
           </li>
           <li>
             <Link to="/cart">Cart (0)</Link>
