@@ -1,0 +1,132 @@
+.about-offices {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.offices-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.offices-header h2 {
+  font-size: 56px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #1a1a1a;
+}
+
+.offices-header .subtitle {
+  color: #4a7c59;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.header-right p {
+  max-width: 400px;
+  color: #666;
+  line-height: 1.6;
+}
+.office-main-content {
+  position: relative;
+  border-radius: 30px;
+  overflow: visible;
+}
+
+.office-bg-image {
+  width: 100%;
+  height: 600px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.office-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.office-accordion-card {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  background: white;
+  width: 450px;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-title h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.accordion-item.active .arrow-btn {
+  background: #4a7c59;
+  color: white;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 200px;
+  margin-top: 15px;
+}
+
+.office-desc {
+  color: #777;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.office-detail {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+@media (max-width: 1100px) {
+  .office-accordion-card {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    margin-top: -50px;
+  }
+}

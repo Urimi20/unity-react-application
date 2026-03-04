@@ -1,0 +1,84 @@
+.faq-section {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.faq-header {
+  margin-bottom: 50px;
+}
+
+.faq-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #f9fbf9;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  padding: 25px 35px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.faq-item.active {
+  border: 1px solid #eee;
+}
+
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-q h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.faq-arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #eef5ee;
+  color: #4a7c59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.faq-item.active .faq-arrow-btn {
+  background: #4a7c59;
+  color: white;
+}
+
+.faq-a-container {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    margin-top 0.4s ease;
+}
+
+.faq-item.active .faq-a-container {
+  max-height: 200px;
+  margin-top: 20px;
+}
+
+.faq-a {
+  color: #666;
+  line-height: 1.7;
+  font-size: 16px;
+  margin: 0;
+}

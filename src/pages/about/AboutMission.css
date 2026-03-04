@@ -1,0 +1,117 @@
+.about-mission {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.mission-image-wrapper {
+  width: 100%;
+  height: 580px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.mission-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mission-right .subtitle {
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.mission-right h2 {
+  font-size: 42px;
+  color: var(--primary-dark);
+  margin-bottom: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.mission-text {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.mission-quote {
+  margin-top: 40px;
+  background-color: var(--accent-light);
+  padding: 35px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.quote-content p {
+  font-style: italic;
+  font-size: 15px;
+  color: var(--primary-dark);
+  margin-bottom: 25px;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.quote-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.quote-author img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info h5 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+.author-info span {
+  font-size: 13px;
+  color: #777777;
+}
+
+.quote-icon {
+  font-size: 80px;
+  color: var(--primary-green);
+  opacity: 0.2;
+  font-family: "Georgia", serif;
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  line-height: 1;
+}
+
+@media (max-width: 992px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mission-image-wrapper {
+    height: 400px;
+  }
+  .mission-right h2 {
+    font-size: 32px;
+  }
+}
