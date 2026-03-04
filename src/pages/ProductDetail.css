@@ -1,0 +1,171 @@
+.product-detail-page {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.product-main-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.product-image-section {
+  background-color: #f9fbf9;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  height: 600px;
+}
+
+.product-image-section img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-details-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.short-desc {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.specs-table {
+  border-top: 1px solid #eee;
+  margin-bottom: 30px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.spec-row span {
+  color: #888;
+}
+
+/* Çmimi */
+.price-tag {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.current-price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.current-price:hover {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.old-price {
+  font-size: 20px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+/* Aksionet e blerjes */
+.purchase-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.qty-input {
+  width: 70px;
+  height: 55px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  background: #f9fbf9;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.size-select {
+  flex: 1;
+  height: 55px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  background: #f9fbf9;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+}
+
+.add-btn {
+  background-color: #008751; /* E gjelbra e GardenView */
+  color: white;
+  border: none;
+  padding: 0 40px;
+  height: 55px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #006b40;
+}
+
+/* Pjesa e poshtme (Description) */
+.product-full-desc {
+  border-top: 1px solid #eee;
+  padding-top: 60px;
+  max-width: 800px;
+}
+
+.points-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.points-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.points-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #008751;
+  font-size: 12px;
+  top: 2px;
+}
+
+@media (max-width: 992px) {
+  .product-main-info {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .product-image-section {
+    height: 400px;
+  }
+}

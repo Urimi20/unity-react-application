@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import MemberDetail from "./pages/about/MemberDetail";
+import Shop from "./pages/Shop";
+import ProductDetail from "./pages/ProductDetail";
 import "./App.css";
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/about/team/:memberId" element={<MemberDetail />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/shop/:slug" element={<ProductDetail />} />
       </Routes>
       <Footer />
     </>
