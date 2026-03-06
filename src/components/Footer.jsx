@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
@@ -6,97 +8,94 @@ const Footer = () => {
       <div className="container">
         <div className="footer-cta">
           <h2>
-            Get in touch and <br /> receive a free quote!
+            Na kontaktoni dhe përfitoni <br /> një ofertë falas!
           </h2>
           <div className="footer-cta-btns">
-            <button className="btn btn-green">Get started now</button>
-            <button className="btn-outline-white">View projects</button>
+            <Link to="/contact" className="btn btn-green">
+              Fillo tani
+            </Link>
+            <Link to="/shop" className="btn-outline-white">
+              Shiko produktet
+            </Link>
           </div>
         </div>
 
         <div className="footer-grid">
-          <div className="footer-col about">
-            <a href="/" className="footer-logo">
+          <div className="footer-col about-section">
+            <Link to="/" className="footer-logo">
               Kop<span>Shti</span>
-            </a>
+            </Link>
             <p className="footer-desc">
-              We create sustainable and breathtaking landscapes that bring
-              nature closer to your home.
+              Ne krijojmë peizazhe të qëndrueshme dhe mahnitëse që sjellin
+              natyrën më afër shtëpisë tuaj. Ekspertizë në dizajn dhe
+              mirëmbajtje.
             </p>
-            <div className="footer-subscribe-wrapper">
-              <h4>Subscribe to our newsletter</h4>
-              <div className="footer-subscribe">
-                <input type="email" placeholder="Your email address" />
-                <button className="btn-subscribe">➔</button>
-              </div>
-            </div>
           </div>
 
           <div className="footer-col">
-            <h4>Quick Links</h4>
+            <h4>Linqe të shpejta</h4>
             <ul>
               <li>
-                <a href="#about">About Us</a>
+                <Link to="/about">Rreth Nesh</Link>
               </li>
               <li>
-                <a href="#services">Our Services</a>
+                <Link to="/shop">Shërbimet tona</Link>
               </li>
               <li>
-                <a href="#portfolio">Portfolio</a>
+                <Link to="/portfolio">Portfolio</Link>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <Link to="/contact">Kontakti</Link>
               </li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4>Services</h4>
+            <h4>Shërbimet tona</h4>
             <ul>
               <li>
-                <a href="#">Garden Design</a>
+                <Link to="/shop">Dizajn Kopshti</Link>
               </li>
               <li>
-                <a href="#">Lawn Maintenance</a>
+                <Link to="/shop">Mirëmbajtje Bari</Link>
               </li>
               <li>
-                <a href="#">Flower Planting</a>
+                <Link to="/shop">Mbjellje Lulesh</Link>
               </li>
               <li>
-                <a href="#">Tree Trimming</a>
+                <Link to="/shop">Krasitje Pemësh</Link>
               </li>
             </ul>
           </div>
 
-          <div className="footer-col">
-            <h4>Instagram Gallery</h4>
-            <div className="footer-gallery">
-              {[1, 2, 3, 4].map((i) => (
-                <div className="gal-item" key={i}>
-                  <img
-                    src={`https://via.placeholder.com/150?text=Garden+${i}`}
-                    alt="Gallery"
-                  />
-                </div>
-              ))}
+          <div className="footer-col newsletter-col">
+            <h4>Abonohuni</h4>
+            <p>Merrni këshilla për kopshtarinë çdo muaj.</p>
+            <div className="footer-subscribe">
+              <input type="email" placeholder="Email-i juaj" />
+              <button className="btn-subscribe">➔</button>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 GardenView. All rights reserved.</p>
+          <p>© 2026 KopShti. Të gjitha të drejtat e rezervuara.</p>
           <div className="social-links">
-            <a href="#" className="social-icon">
+            <a href="https://instagram.com" className="social-icon">
               Instagram
             </a>
-            <a href="#" className="social-icon">
+            <a href="https://facebook.com" className="social-icon">
               Facebook
             </a>
-            <a href="#" className="social-icon">
+            <a href="https://linkedin.com" className="social-icon">
               LinkedIn
             </a>
           </div>
-          <p>Privacy Policy • Terms of Service</p>
+          <div className="footer-legal">
+            <Link to="/privacy">Privatësia</Link>
+            <span>•</span>
+            <Link to="/terms">Kushtet</Link>
+          </div>
         </div>
       </div>
     </footer>

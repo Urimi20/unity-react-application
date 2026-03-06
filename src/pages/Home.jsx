@@ -1,76 +1,21 @@
 import React from "react";
-import Dashboard from "../components/Dashboard";
-import Contact from "../components/Contact";
-import Card from "../components/Card";
-import { useCart } from "../context/CartContext";
-import "./Home.css";
+
+import Hero from "./home/Hero.jsx";
+import WhyChooseUs from "./home/WhyChooseUs.jsx";
+import Services from "./home/Services.jsx";
+import Portfolio from "./home/Portfolio.jsx";
+import Process from "./home/Process.jsx";
+import Testimonials from "./home/Testimonals.jsx";
 
 const Home = () => {
-  const { addToCart, cartItems, getTotalPrice } = useCart();
-
-  const handleAddToCart = (item) => {
-    addToCart(item);
-  };
-
-  const sampleCards = [
-    {
-      title: 'Dizajnim i Kopshtit',
-      description: 'Transformimi i hapësirës tuaja të jashtme me dizajne profesionale të peisazheve.',
-      icon: '',
-      price: 299,
-      variant: 'featured',
-      size: 'medium'
-    },
-    {
-      title: 'Mbjellja e Luleve',
-      description: 'Shërbime profesionale të mbjelljes sezonale për të krijuarë një kopsht të gjallë gjatë gjithë vitin.',
-      icon: '',
-      price: 149,
-      variant: 'default',
-      size: 'medium'
-    },
-    {
-      title: 'Mirëmbajtja e Kopshtit',
-      description: 'Plane komplekse mirëmbajtjeje për të mbajturë kopshtin tuaj të shëndetshë dhe të shëndetshë në çdo stinë.',
-      icon: '',
-      price: 199,
-      variant: 'default',
-      size: 'medium'
-    }
-  ];
-
   return (
     <div className="home-page">
-      <Dashboard />
-      
-      <section className="showcase-section">
-        <div className="container">
-          <h2>Shërbimet Tona Premium</h2>
-          <div className="cards-grid">
-            {sampleCards.map((card, index) => (
-              <Card 
-                key={index}
-                title={card.title}
-                description={card.description}
-                icon={card.icon}
-                price={card.price}
-                variant={card.variant}
-                size={card.size}
-                onClick={() => console.log(`Klikuar mbi ${card.title}`)}
-                onAddToCart={handleAddToCart}
-              />
-            ))}
-          </div>
-          {cartItems.length > 0 && (
-            <div className="cart-summary">
-              <h3>Shpallëndi ({cartItems.length} produkte)</h3>
-              <p>Total: ${getTotalPrice().toFixed(2)}</p>
-            </div>
-          )}
-        </div>
-      </section>
-      
-      <Contact />
+      <Hero />
+      <WhyChooseUs />
+      <Services />
+      <Portfolio />
+      <Process />
+      <Testimonials />
     </div>
   );
 };

@@ -1,95 +1,83 @@
-import React from 'react';
-import { useCart } from '../context/CartContext';
-import './Cart.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+import "./Cart.css";
 
 const Cart = () => {
-  const { cartItems, removeFromCart, updateQuantity, getTotalPrice, getTotalItems, clearCart } = useCart();
-
-  if (cartItems.length === 0) {
-    return (
-      <div className="cart-page">
-        <div className="container">
-          <div className="empty-cart">
-            <h1>Your cart is empty</h1>
-            <p>Add some products to your cart to see them here.</p>
-            <a href="/shop" className="continue-shopping">Continue Shopping</a>
-          </div>
-        </div>
-      </div>
-    );
-  }
+ 
+  const { cartItems, getTotalPrice, removeFromCart } = useCart();
 
   return (
     <div className="cart-page">
       <div className="container">
-        <h1>Shopping Cart ({getTotalItems()} items)</h1>
-        
-        <div className="cart-content">
-          <div className="cart-items">
-            {cartItems.map((item) => (
-              <div key={item.id} className="cart-item">
-                <div className="item-image">
-                  <img src={item.image || item.img || 'https://via.placeholder.com/100x100'} alt={item.title} />
-                </div>
-                
-                <div className="item-details">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <p className="item-price">${item.price.toFixed(2)}</p>
-                </div>
-                
-                <div className="item-quantity">
-                  <button 
-                    onClick={() => updateQuantity(item.id, (item.quantity || 1) - 1)}
-                    className="quantity-btn"
-                  >
-                    -
-                  </button>
-                  <span className="quantity">{item.quantity || 1}</span>
-                  <button 
-                    onClick={() => updateQuantity(item.id, (item.quantity || 1) + 1)}
-                    className="quantity-btn"
-                  >
-                    +
-                  </button>
-                </div>
-                
-                <div className="item-total">
-                  ${(item.price * (item.quantity || 1)).toFixed(2)}
-                </div>
-                
-                <button 
-                  onClick={() => removeFromCart(item.id)}
-                  className="remove-btn"
-                >
-                  ×
-                </button>
-              </div>
-            ))}
+        <h1>Shporta e Blerjeve</h1>
+
+        {cartItems.length === 0 ? (
+          <div className="empty-cart">
+            <p>Shporta juaj është bosh.</p>
+            <Link
+              to="/shop"
+              className="btn-green add-btn"
+              style={{
+                textDecoration: "none",
+                display: "inline-block",
+                marginTop: "20px",
+              }}
+            >
+              Kthehu te Dyqani
+            </Link>
           </div>
-          
-          <div className="cart-summary">
-            <div className="summary-content">
-              <h3>Order Summary</h3>
+        ) : (
+          <div className="cart-content">
+            <div className="cart-items-list">
+              {cartItems.map((item, index) => (
+                <div className="cart-item" key={item.id || index}>
+                  <div className="cart-item-img">
+                    <img
+                      src={
+                        item.image ||
+                        "https://via.placeholder.com/100?text=No+Image"
+                      }
+                      alt={item.title}
+                    />
+                  </div>
+
+                  <div className="cart-item-info">
+                    <h3>{item.title}</h3>
+                    <p className="item-price">
+                      ${Number(item.price).toFixed(2)}
+                    </p>
+                    <p className="item-qty">Sasia: {item.quantity || 1}</p>
+                  </div>
+
+                
+                  <button
+                    className="remove-btn"
+                    onClick={() => removeFromCart && removeFromCart(item.id)}
+                  >
+                    Hiq
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            <div className="cart-summary-box">
+              <h2>Përmbledhja</h2>
+              <hr />
               <div className="summary-row">
-                <span>Subtotal ({getTotalItems()} items)</span>
-                <span>${getTotalPrice().toFixed(2)}</span>
-              </div>
-              <div className="summary-row">
-                <span>Shipping</span>
-                <span>Free</span>
+                <span>Totali i produkteve:</span>
+                <span>{cartItems.length}</span>
               </div>
               <div className="summary-row total">
-                <span>Total</span>
+                <span>Totali për pagesë:</span>
                 <span>${getTotalPrice().toFixed(2)}</span>
               </div>
-              
-              <button className="checkout-btn">Proceed to Checkout</button>
-              <button onClick={clearCart} className="clear-cart-btn">Clear Cart</button>
-              <a href="/shop" className="continue-shopping">Continue Shopping</a>
+              <button className="checkout-btn add-btn">
+                Vazhdo me Pagesën
+              </button>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

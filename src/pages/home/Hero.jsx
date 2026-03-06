@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Hero.css";
-import images from "../../assets/images/Home_Images/heroBackground.png";
+import heroImage from "../../assets/images/Home_Images/heroBackground.png";
 
 const Hero = () => {
   return (
     <section
       className="hero"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${images})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroImage})`,
       }}
     >
       <div className="container hero-container">
@@ -21,8 +22,13 @@ const Hero = () => {
             estetike.
           </p>
           <div className="hero-btns">
-            <button className="btn btn-green">Na kontaktoni</button>
-            <button className="btn-outline">Eksploroni shërbimet →</button>
+            <Link to="/contact" className="btn btn-green">
+              Na kontaktoni
+            </Link>
+
+            <Link to="/shop" className="btn-outline">
+              Eksploroni shërbimet →
+            </Link>
           </div>
         </div>
 
@@ -34,7 +40,11 @@ const Hero = () => {
           </p>
           <div className="input-group">
             <input type="email" placeholder="Adresa juaj elektronike" />
-            <button className="btn-arrow">→</button>
+
+           
+            <Link to="/cart" className="btn-arrow">
+              →
+            </Link>
           </div>
         </div>
       </div>

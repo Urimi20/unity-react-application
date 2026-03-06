@@ -52,7 +52,7 @@ const Testimonials = () => {
       <div className="card-top">
         <div className="client-img">
           <img
-            src={`https://i.pravatar.cc/150?u=${rev.handle}`}
+            src={`https://i.pravatar.cc/150?u=${rev.handle}`} //imazhet e profileve random
             alt={rev.name}
           />
         </div>

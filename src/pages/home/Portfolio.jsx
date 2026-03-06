@@ -1,4 +1,5 @@
 import "./Portfolio.css";
+import { Link } from "react-router-dom";
 
 import portImg1 from "../../assets/images/Home_Images/project1.png";
 import portImg2 from "../../assets/images/Home_Images/project2.png";
@@ -12,7 +13,7 @@ const Portfolio = () => {
     <section className="portfolio section-padding">
       <div className="container">
         <div className="portfolio-header">
-          <span className="subtitle">PORTOFOLI</span>
+          <span className="subtitle">PORTOFOLIO</span>
           <h2>
             Projektet tona të realizuara <br /> në arkitekturën e peizazhit
           </h2>
@@ -41,7 +42,9 @@ const Portfolio = () => {
         </div>
 
         <div className="portfolio-btn">
-          <button className="btn btn-green">Shikoni të gjitha projektet</button>
+          <Link to="/shop" className="btn btn-green">
+            Shikoni të gjitha projektet
+          </Link>
         </div>
       </div>
     </section>

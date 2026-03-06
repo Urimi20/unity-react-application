@@ -1,4 +1,5 @@
 import "./WhyChooseUs.css";
+import { Link } from "react-router-dom";
 import whyChoseUsImg from "../../assets/images/Home_Images/whyChoseUsImg.png";
 
 const WhyChooseUs = () => {
@@ -53,7 +54,9 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          <button className="btn btn-green">Na kontaktoni</button>
+          <Link to="/contact" className="btn btn-green">
+            Na kontaktoni
+          </Link>
         </div>
       </div>
     </section>

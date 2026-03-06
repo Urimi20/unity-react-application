@@ -71,11 +71,23 @@
 }
 
 .btn-arrow {
-  background: var(--primary-green);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--primary-green);
   color: white;
   border: none;
-  width: 45px;
-  height: 45px;
   border-radius: 50%;
+  padding: 10px 20px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btns .btn-outline {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
 }
