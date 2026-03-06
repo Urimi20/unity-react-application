@@ -1,0 +1,307 @@
+.card {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card.hovered {
+  transform: translateY(-8px);
+}
+
+.card--small {
+  max-width: 320px;
+}
+
+.card--medium {
+  max-width: 400px;
+}
+
+.card--large {
+  max-width: 500px;
+}
+
+.card--featured {
+  border: 2px solid #38a169;
+  background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+}
+
+.card--featured:hover {
+  box-shadow: 0 20px 40px rgba(56, 161, 105, 0.2);
+}
+
+.card__shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg) translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card__shine {
+  opacity: 1;
+}
+
+.card__image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card__image img {
+  transform: scale(1.1);
+}
+
+.card__badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.card__content {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #2d3748;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.card__price {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card__price-amount {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #38a169;
+  line-height: 1;
+}
+
+.card__price-period {
+  font-size: 0.875rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.card__description {
+  color: #4a5568;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.card__feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.feature-check {
+  color: #38a169;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.card__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.card__button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.card__button:hover::before {
+  left: 100%;
+}
+
+.card__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.card__add-to-cart {
+  background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__add-to-cart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.card__add-to-cart:hover::before {
+  left: 100%;
+}
+
+.card__add-to-cart:hover {
+  background: linear-gradient(135deg, #2f855a 0%, #276749 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 161, 105, 0.3);
+}
+
+.card__add-to-cart.added {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  animation: addedPulse 0.6s ease;
+}
+
+@keyframes addedPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.card--featured .card__add-to-cart {
+  background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+  box-shadow: 0 4px 15px rgba(56, 161, 105, 0.2);
+}
+
+.card--featured .card__add-to-cart:hover {
+  box-shadow: 0 8px 25px rgba(56, 161, 105, 0.4);
+}
+
+.card--large .card__description {
+  font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+  }
+  
+  .card__content {
+    padding: 24px;
+  }
+  
+  .card__title {
+    font-size: 1.25rem;
+  }
+  
+  .card__description {
+    font-size: 0.875rem;
+  }
+}

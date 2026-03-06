@@ -1,11 +1,11 @@
-import React from "react";
-import Dashboard from "../components/Dashboard";
-import Contact from "../components/Contact";
-import Card from "../components/Card";
-import { useCart } from "../context/CartContext";
-import "./Home.css";
+import React from 'react';
+import Dashboard from '../components/Dashboard';
+import Contact from '../components/Contact';
+import Card from '../components/Card';
+import { useCart } from '../context/CartContext';
+import './DashboardPage.css';
 
-const Home = () => {
+const DashboardPage = () => {
   const { addToCart, cartItems, getTotalPrice } = useCart();
 
   const handleAddToCart = (item) => {
@@ -14,25 +14,25 @@ const Home = () => {
 
   const sampleCards = [
     {
-      title: 'Dizajnim i Kopshtit',
-      description: 'Transformimi i hapësirës tuaja të jashtme me dizajne profesionale të peisazheve.',
-      icon: '',
+      title: 'Garden Design',
+      description: 'Complete garden transformation with professional landscape design services tailored to your space and preferences.',
+      icon: '🌿',
       price: 299,
       variant: 'featured',
       size: 'medium'
     },
     {
-      title: 'Mbjellja e Luleve',
-      description: 'Shërbime profesionale të mbjelljes sezonale për të krijuarë një kopsht të gjallë gjatë gjithë vitin.',
-      icon: '',
+      title: 'Flower Planting',
+      description: 'Seasonal flower planting and maintenance to keep your garden vibrant throughout the year.',
+      icon: '🌸',
       price: 149,
       variant: 'default',
       size: 'medium'
     },
     {
-      title: 'Mirëmbajtja e Kopshtit',
-      description: 'Plane komplekse mirëmbajtjeje për të mbajturë kopshtin tuaj të shëndetshë dhe të shëndetshë në çdo stinë.',
-      icon: '',
+      title: 'Garden Maintenance',
+      description: 'Regular maintenance services including pruning, weeding, and plant care to keep your garden healthy.',
+      icon: '🌱',
       price: 199,
       variant: 'default',
       size: 'medium'
@@ -40,12 +40,12 @@ const Home = () => {
   ];
 
   return (
-    <div className="home-page">
+    <div className="dashboard-page">
       <Dashboard />
       
       <section className="showcase-section">
         <div className="container">
-          <h2>Shërbimet Tona Premium</h2>
+          <h2>Our Premium Services</h2>
           <div className="cards-grid">
             {sampleCards.map((card, index) => (
               <Card 
@@ -56,14 +56,14 @@ const Home = () => {
                 price={card.price}
                 variant={card.variant}
                 size={card.size}
-                onClick={() => console.log(`Klikuar mbi ${card.title}`)}
+                onClick={() => console.log(`Clicked on ${card.title}`)}
                 onAddToCart={handleAddToCart}
               />
             ))}
           </div>
           {cartItems.length > 0 && (
             <div className="cart-summary">
-              <h3>Shpallëndi ({cartItems.length} produkte)</h3>
+              <h3>Cart Summary ({cartItems.length} items)</h3>
               <p>Total: ${getTotalPrice().toFixed(2)}</p>
             </div>
           )}
@@ -75,4 +75,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default DashboardPage;

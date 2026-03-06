@@ -1,13 +1,35 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 import "./Shop.css";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const { addToCart, cartItems, getTotalPrice } = useCart();
 
   const API_URL = "https://69a8819c37caab4b8c61ecb5.mockapi.io/products";
+
+  const handleAddToCart = (product, e) => {
+    e.stopPropagation();
+    const cartItem = {
+      id: product.id,
+      title: product.name,
+      price: product.price,
+      description: product.description,
+      image: product.img
+    };
+    addToCart(cartItem);
+    
+    const button = e.target;
+    button.textContent = 'Added!';
+    button.classList.add('added');
+    setTimeout(() => {
+      button.textContent = '+';
+      button.classList.remove('added');
+    }, 2000);
+  };
 
   useEffect(() => {
     fetch(API_URL)
@@ -37,6 +59,12 @@ const Shop = () => {
   return (
     <div className="shop-page">
       <div className="container">
+        {cartItems.length > 0 && (
+          <div className="cart-summary">
+            <h3>Cart Summary ({cartItems.length} items)</h3>
+            <p>Total: ${getTotalPrice().toFixed(2)}</p>
+          </div>
+        )}
         <div className="products-grid">
           {products.length > 0 ? (
             products.map((product) => (
@@ -60,7 +88,7 @@ const Shop = () => {
 
                   <button
                     className="add-to-cart-btn"
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={(e) => handleAddToCart(product, e)}
                   >
                     +
                   </button>

@@ -7,11 +7,15 @@ import About from "./pages/About";
 import MemberDetail from "./pages/about/MemberDetail";
 import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
+import DashboardPage from "./pages/DashboardPage";
+import Cart from "./pages/Cart";
+import ContactPage from "./pages/ContactPage";
+import { CartProvider } from "./context/CartContext";
 import "./App.css";
 
 function App() {
   return (
-    <>
+    <CartProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,9 +23,12 @@ function App() {
         <Route path="/about/team/:memberId" element={<MemberDetail />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/:slug" element={<ProductDetail />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
-    </>
+    </CartProvider>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 import "./ProductDetail.css";
 
 const ProductDetail = () => {
@@ -7,6 +8,8 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
+  const [addedToCart, setAddedToCart] = useState(false);
+  const { addToCart } = useCart();
 
   const API_URL = `https://69a8819c37caab4b8c61ecb5.mockapi.io/products?slug=${slug}`;
 
@@ -26,6 +29,26 @@ const ProductDetail = () => {
       });
     window.scrollTo(0, 0);
   }, [slug]);
+
+  const handleAddToCart = () => {
+    if (product) {
+      const cartItem = {
+        id: product.id || product.name || `product-${Date.now()}`,
+        title: product.name,
+        price: product.price,
+        description: product.description,
+        image: product.img,
+        quantity: quantity
+      };
+      
+      addToCart(cartItem);
+      setAddedToCart(true);
+      
+      setTimeout(() => {
+        setAddedToCart(false);
+      }, 2000);
+    }
+  };
 
   if (loading)
     return (
@@ -90,7 +113,12 @@ const ProductDetail = () => {
                 <option>Medium</option>
                 <option>Large</option>
               </select>
-              <button className="add-btn">Add to Cart</button>
+              <button 
+                className={`add-btn ${addedToCart ? 'added' : ''}`}
+                onClick={handleAddToCart}
+              >
+                {addedToCart ? 'Added to Cart!' : 'Add to Cart'}
+              </button>
             </div>
           </div>
         </div>

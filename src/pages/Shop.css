@@ -105,6 +105,41 @@
   transform: scale(1.1);
 }
 
+.add-to-cart-btn.added {
+  background-color: #48bb78;
+  font-size: 12px;
+  animation: addedPulse 0.6s ease;
+}
+
+@keyframes addedPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.cart-summary {
+  margin-bottom: 40px;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #008751;
+  text-align: center;
+}
+
+.cart-summary h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.cart-summary p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #008751;
+}
+
 .product-info h3 {
   font-size: 22px;
   font-weight: 600;

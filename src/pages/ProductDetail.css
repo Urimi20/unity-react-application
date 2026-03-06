@@ -130,6 +130,17 @@
   background-color: #006b40;
 }
 
+.add-btn.added {
+  background-color: #48bb78;
+  animation: addedPulse 0.6s ease;
+}
+
+@keyframes addedPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 /* Pjesa e poshtme (Description) */
 .product-full-desc {
   border-top: 1px solid #eee;
