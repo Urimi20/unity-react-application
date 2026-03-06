@@ -16,6 +16,7 @@ const ContactPage = () => {
 
   const onSubmit = (data) => {
     console.log("Të dhënat që do të ruhen:", data);
+    
     alert("Mesazhi u dërgua me sukses! Faleminderit që na kontaktuat.");
     reset();
   };
