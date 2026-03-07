@@ -59,7 +59,7 @@ const Services = () => {
           </div>
           <div className="services-btns">
             <button className="btn btn-green">Na kontaktoni</button>
-            <button className="btn-outline-white">Shiko të gjitha</button>
+            <button className="btn btn-gray">Shiko të gjitha</button>
           </div>
         </div>
 
