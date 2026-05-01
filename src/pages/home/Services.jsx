@@ -10,6 +10,9 @@ import "./Services.css";
 import serviceImg1 from "../../assets/images/Home_Images/exploreImg1.png";
 import serviceImg2 from "../../assets/images/Home_Images/exploreImg2.png";
 import serviceImg3 from "../../assets/images/Home_Images/exploreImg3.png";
+import serviceImg4 from "../../assets/images/Home_Images/exploreImg4.png";
+import serviceImg5 from "../../assets/images/Home_Images/exploreImg5.png";
+import serviceImg6 from "../../assets/images/Home_Images/exploreImg6.png";
 
 const servicesData = [
   {
@@ -30,17 +33,17 @@ const servicesData = [
   {
     title: "Kujdesi për barin",
     desc: "Korrje e rregullt dhe trajtim për një bar të shëndetshëm dhe të gjelbër.",
-    img: serviceImg1,
+    img: serviceImg4,
   },
   {
     title: "Krasitja e pemëve",
     desc: "Prerje profesionale për shëndetin dhe estetikën e pemëve tuaja.",
-    img: serviceImg2,
+    img: serviceImg5,
   },
   {
     title: "Sistemet e ujitjes",
     desc: "Sisteme inteligjente për efikasitet maksimal të përdorimit të ujit.",
-    img: serviceImg3,
+    img: serviceImg6,
   },
 ];
 
