@@ -5,7 +5,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./Services.css";
+import "./Servicess.css";
 
 import serviceImg1 from "../../assets/images/Home_Images/exploreImg1.png";
 import serviceImg2 from "../../assets/images/Home_Images/exploreImg2.png";
