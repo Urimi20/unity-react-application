@@ -22,7 +22,7 @@ const servicesData = [
   },
   {
     title: "Mbjellja e luleve",
-    desc: "Lule sezonale të përzgjedhura sipas specifikave të tokës suaj.",
+    desc: "Lule sezonale të përzgjedhura sipas specifikave te tokës suaj.",
     img: serviceImg2,
   },
   {
