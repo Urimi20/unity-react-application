@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./AboutOffices.css";
-import officeImg from "../../assets/images/about_images/officeBg.png";
+import officeImg from "../../assets/images/about_images/OfficeBg.png";
 
 const AboutOffices = () => {
   const [activeIndex, setActiveIndex] = useState(0);
