@@ -17,7 +17,7 @@ import serviceImg6 from "../../assets/images/Home_Images/exploreImg6.png";
 const servicesData = [
   {
     title: "Dizajni i kopshtit",
-    desc: "Planimetri profesional dhe vizualizime 3D për projektin tuaj.",
+    desc: "Planimetri profesional dhe vizualizime  3D për projektin tuaj.",
     img: serviceImg1,
   },
   {
